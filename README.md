@@ -33,45 +33,27 @@ https://github.com/eziya/STM32_SPI_MCP2515
 ## 📍 Wiring
 
 ### STM32 → MCP2515
--3.3V → VIO (logic)
-
--5V → VCC
-
--GND → GND
-
--PA5 → SCK
-
--PA7 → MOSI
-
--PA6 ← MISO
-
--PB12 → CS
-
--(any GPIO) → INT (optional)
-
--CANH ↔ CANH
-
--CANL ↔ CANL
-
+- 3.3V → VIO (logic)
+- 5V → VCC
+- GND → GND
+- PA5 → SCK
+- PA7 → MOSI
+- PA6 ← MISO
+- PB12 → CS
+- (any GPIO) → INT (optional)
+- CANH ↔ CANH
+- CANL ↔ CANL
 
 ### Arduino Mega → MCP2515
--5V → VCC
-
--GND → GND
-
--50 ← MISO
-
--51 → MOSI
-
--52 → SCK
-
--10 → CS
-
--2 ← INT
-
--CANH ↔ CANH
-
--CANL ↔ CANL
+- 5V → VCC
+- GND → GND
+- 50 ← MISO
+- 51 → MOSI
+- 52 → SCK
+- 10 → CS
+- 2 ← INT
+- CANH ↔ CANH
+- CANL ↔ CANL
 
 
 ⚠ Make sure both boards share **common ground** and the CAN bus has proper termination.
