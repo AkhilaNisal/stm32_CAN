@@ -33,27 +33,27 @@ https://github.com/eziya/STM32_SPI_MCP2515
 ## 📍 Wiring
 
 ### STM32 → MCP2515
-3.3V → VIO (logic)
-5V → VCC
-GND → GND
-PA5 → SCK
-PA7 → MOSI
-PA6 ← MISO
-PB12 → CS
-(any GPIO) → INT (optional)
-CANH ↔ CANH
-CANL ↔ CANL
+-3.3V → VIO (logic)
+-5V → VCC
+-GND → GND
+-PA5 → SCK
+-PA7 → MOSI
+-PA6 ← MISO
+-PB12 → CS
+-(any GPIO) → INT (optional)
+-CANH ↔ CANH
+-CANL ↔ CANL
 
 ### Arduino Mega → MCP2515
-5V → VCC
-GND → GND
-50 ← MISO
-51 → MOSI
-52 → SCK
-10 → CS
-2 ← INT
-CANH ↔ CANH
-CANL ↔ CANL
+-5V → VCC
+-GND → GND
+-50 ← MISO
+-51 → MOSI
+-52 → SCK
+-10 → CS
+-2 ← INT
+-CANH ↔ CANH
+-CANL ↔ CANL
 
 
 ⚠ Make sure both boards share **common ground** and the CAN bus has proper termination.
@@ -69,8 +69,10 @@ STM32 code initializes the MCP2515 (8 MHz crystal) and sets bit timing according
 MCP2515_WriteByte(MCP2515_CNF1, 0x00);
 MCP2515_WriteByte(MCP2515_CNF2, 0x90);
 MCP2515_WriteByte(MCP2515_CNF3, 0x02);
+```
+---
 
-###📡 Arduino Mega Code
+## 📡 Arduino Mega Code
 
 The Arduino Mega snippet below receives CAN messages from MCP2515 and prints them over Serial:
 
@@ -118,3 +120,4 @@ void loop()
     Serial.println();
   }
 }
+```
