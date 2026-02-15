@@ -70,6 +70,7 @@ MCP2515_WriteByte(MCP2515_CNF1, 0x00);
 MCP2515_WriteByte(MCP2515_CNF2, 0x90);
 MCP2515_WriteByte(MCP2515_CNF3, 0x02);
 ```
+<!-- ← THIS CLOSES THE C CODE BLOCK -->
 ---
 
 ## 📡 Arduino Mega Code
