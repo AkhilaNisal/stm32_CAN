@@ -211,14 +211,14 @@ uint8_t CANSPI_Receive(uCAN_MSG *tempCanMsg)
   if (rxStatus.rxBuffer != 0)
   {
     /* finding buffer which has a message */
-    if ((rxStatus.rxBuffer == MSG_IN_RXB0)|(rxStatus.rxBuffer == MSG_IN_BOTH_BUFFERS))
-    {
-      MCP2515_ReadRxSequence(MCP2515_READ_RXB0SIDH, rxReg.rx_reg_array, sizeof(rxReg.rx_reg_array));
-    }
-    else if (rxStatus.rxBuffer == MSG_IN_RXB1)
-    {
-      MCP2515_ReadRxSequence(MCP2515_READ_RXB1SIDH, rxReg.rx_reg_array, sizeof(rxReg.rx_reg_array));
-    }
+	if ((rxStatus.rxBuffer == MSG_IN_RXB0) || (rxStatus.rxBuffer == MSG_IN_BOTH_BUFFERS)) {
+	          MCP2515_ReadRxSequence(MCP2515_READ_RXB0SIDH, rxReg.rx_reg_array, sizeof(rxReg.rx_reg_array));
+	          MCP2515_BitModify(MCP2515_CANINTF, 0x01, 0x00); // clear RX0IF
+	    }
+    else if (rxStatus.rxBuffer == MSG_IN_RXB1) {
+	          MCP2515_ReadRxSequence(MCP2515_READ_RXB1SIDH, rxReg.rx_reg_array, sizeof(rxReg.rx_reg_array));
+	          MCP2515_BitModify(MCP2515_CANINTF, 0x02, 0x00); // clear RX1IF
+	    }
     
     /* if the message is extended CAN type */
     if (rxStatus.msgType == dEXTENDED_CAN_MSG_ID_2_0B)
@@ -385,3 +385,39 @@ static void convertCANid2Reg(uint32_t tempPassedInID, uint8_t canIdType, id_reg_
     passedIdReg->tempSIDH = 0xFF & tempPassedInID;
   }
 }
+
+/* Returns MCP2515 EFLG */
+uint8_t CANSPI_ReadEFLG(void)
+{
+    return MCP2515_ReadByte(MCP2515_EFLG);
+}
+
+/* Recover if MCP2515 is bus-off or TX is stuck */
+void CANSPI_RecoverIfNeeded(void)
+{
+    uint8_t eflg = MCP2515_ReadByte(MCP2515_EFLG);
+
+    /* EFLG bit 5 is TXBO (bus-off) on MCP2515 */
+    if (eflg & (1u << 5)) {
+        /* Full reset + re-init is the simplest reliable recovery */
+        MCP2515_Reset();
+        CANSPI_Initialize();
+
+        /* Clear errors */
+        MCP2515_WriteByte(MCP2515_EFLG, 0x00);
+    }
+}
+
+uint8_t CANSPI_TransmitWait(uCAN_MSG *msg, uint32_t timeout_ms)
+{
+    uint32_t start = HAL_GetTick();
+    while ((HAL_GetTick() - start) < timeout_ms)
+    {
+        if (CANSPI_Transmit(msg)) {   // your existing function
+            return 1;                 // queued to MCP2515 TX buffer
+        }
+    }
+    return 0; // timeout: still no free TX buffer
+}
+
+

@@ -1,0 +1,2 @@
+../Core/Src/fs_ai_protocol.c:8:6:FS_AI_TransmitStatus	40	static
+../Core/Src/fs_ai_protocol.c:33:6:FS_AI_ProcessIncoming	16	static

@@ -9,3 +9,6 @@
 ../Core/Src/CANSPI.c:318:17:convertReg2ExtendedCANid	32	static
 ../Core/Src/CANSPI.c:340:17:convertReg2StandardCANid	24	static
 ../Core/Src/CANSPI.c:353:13:convertCANid2Reg	32	static
+../Core/Src/CANSPI.c:390:9:CANSPI_ReadEFLG	8	static
+../Core/Src/CANSPI.c:396:6:CANSPI_RecoverIfNeeded	16	static
+../Core/Src/CANSPI.c:411:9:CANSPI_TransmitWait	24	static

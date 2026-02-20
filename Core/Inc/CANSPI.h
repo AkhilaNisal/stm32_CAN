@@ -55,4 +55,9 @@ uint8_t CANSPI_isBussOff(void);
 uint8_t CANSPI_isRxErrorPassive(void);
 uint8_t CANSPI_isTxErrorPassive(void);
 
+uint8_t CANSPI_ReadEFLG(void);
+void CANSPI_RecoverIfNeeded(void);
+uint8_t CANSPI_TransmitWait(uCAN_MSG *msg, uint32_t timeout_ms);
+
+
 #endif	/* __CAN_SPI_H */
