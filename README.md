@@ -945,7 +945,7 @@ void loop() {
 | Bandwidth Used      | ~4% of 500 kbps   |
 | Latency             | 2-3 ms end-to-end |
 | Handshake           | Every 500 ms      |
-| Timeout Detection   | 2000 ms           |
+| Timeout Detection   | 100 ms           |
 
 ---
 
@@ -968,6 +968,12 @@ AI TRANSMITS (→ VCU):
   0x512 = Rear Motor Command
   0x513 = Steering Command
   0x514 = Brake Command
+
+
+Need to add:
+  FSG Logging (0x500)	
+  FSG Logging (0x502)	
+  Diagnostics (0x120)
 ```
 
   ---
