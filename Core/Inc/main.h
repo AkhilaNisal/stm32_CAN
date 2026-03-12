@@ -52,8 +52,8 @@ extern "C" {
 #define MOTOR_MIN_TORQUE_NM         0.0f
 
 /* Steering Configuration */
-#define STEER_MAX_ANGLE_DEG         21.0f
-#define STEER_MIN_ANGLE_DEG         -21.0f
+#define STEER_MAX_ANGLE_DEG         24.0f   // FS-AI V4.0
+#define STEER_MIN_ANGLE_DEG        -24.0f
 #define STEER_ANGLE_RESOLUTION_DEG 0.1f
 
 /* Brake Configuration */
