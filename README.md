@@ -97,4 +97,15 @@ The **FS-AI CAN Communication System** enables complete bidirectional communicat
         ↓
 20 ms   Next TX cycle
 
+---
 
+## Hardware Configuration
+Arduino Mega Pinout
+|Pin	|Signal	|Device	|Purpose|
+|51	|MOSI	|MCP2515 |SPI Data Out|
+|50	|MISO	|MCP2515 |SPI Data In|
+|52	|SCK	|MCP2515 |SPI Clock|
+|10	|CS	|MCP2515 |Chip Select|
+|2	|INT	|MCP2515 |Interrupt (RX Ready)|
+
+Note: PC13 and PA4 are STM32-style pin names, not Arduino Mega pin names. Keep them only if they belong to the STM32 side of your system
