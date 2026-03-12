@@ -290,7 +290,7 @@ DLC: 2 bytes
 
 ## Data Frame Details
 ### Encoding Examples
-
+```text
 **Example 1: 50.0 Nm Torque**
 Value: 50.0 Nm
 Raw:   50.0 × 10 = 500 (0x01F4)
@@ -305,7 +305,7 @@ LE:    [0x37, 0x00]
 Value: -10.0°
 Raw:   -10.0 × 10 = -100 (0xFF9C)
 LE:    [0x9C, 0xFF]
-
+```
 ---
 
 ## File Structure
