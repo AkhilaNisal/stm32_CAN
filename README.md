@@ -15,12 +15,7 @@ Complete bidirectional CAN communication system between STM32F1 AI Computer and 
 - [File Structure](#file-structure)
 - [Function Reference](#function-reference)
 - [Arduino Code](#arduino-code)
-- [Testing & Troubleshooting](#testing--troubleshooting)
 - [Performance Metrics](#performance-metrics)
-- [Getting Started](#getting-started)
-- [Version History](#version-history)
-- [License](#license)
-- [Support & Contact](#support--contact)
 - [Quick Reference](#quick-reference)
 
 ---
@@ -313,6 +308,7 @@ LE:    [0x9C, 0xFF]
 
 ## File Structure
 
+```text
 FS-AI/
   ├── main.c
   ├── main.h
@@ -324,6 +320,7 @@ FS-AI/
   ├── can_interface.h
   ├── fs_ai_protocol.c
   └── fs_ai_protocol.h
+```
 
 ---
 
@@ -953,6 +950,7 @@ void loop() {
 ## Quick Reference
 ### CAN IDs at a Glance
 
+```text
 VCU TRANSMITS (→ AI):
   0x520 = Status
   0x521 = Front Motor Feedback
@@ -968,6 +966,7 @@ AI TRANSMITS (→ VCU):
   0x512 = Rear Motor Command
   0x513 = Steering Command
   0x514 = Brake Command
+```
 
   ---
 
