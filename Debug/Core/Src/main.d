@@ -23,8 +23,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h \
- ../Core/Inc/CANSPI.h ../Core/Inc/main.h ../Core/Inc/fs-ai_api_protocol.h \
- ../Core/Inc/CANSPI.h
+ ../Core/Inc/ai_controller.h ../Core/Inc/can_transport.h \
+ ../Core/Inc/can_interface.h ../Core/Inc/CANSPI.h ../Core/Inc/main.h \
+ ../Core/Inc/fs_ai_protocol.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -50,7 +51,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h:
+../Core/Inc/ai_controller.h:
+../Core/Inc/can_transport.h:
+../Core/Inc/can_interface.h:
 ../Core/Inc/CANSPI.h:
 ../Core/Inc/main.h:
-../Core/Inc/fs-ai_api_protocol.h:
-../Core/Inc/CANSPI.h:
+../Core/Inc/fs_ai_protocol.h:

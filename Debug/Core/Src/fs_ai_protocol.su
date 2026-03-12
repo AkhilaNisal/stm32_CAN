@@ -1,2 +1,12 @@
-../Core/Src/fs_ai_protocol.c:8:6:FS_AI_TransmitStatus	40	static
-../Core/Src/fs_ai_protocol.c:33:6:FS_AI_ProcessIncoming	16	static
+../Core/Src/fs_ai_protocol.c:24:6:fs_ai_protocol_encode_status	24	static
+../Core/Src/fs_ai_protocol.c:65:6:fs_ai_protocol_encode_drive_f	32	static
+../Core/Src/fs_ai_protocol.c:100:6:fs_ai_protocol_encode_drive_r	32	static
+../Core/Src/fs_ai_protocol.c:135:6:fs_ai_protocol_encode_steer	24	static
+../Core/Src/fs_ai_protocol.c:160:6:fs_ai_protocol_encode_brake	24	static
+../Core/Src/fs_ai_protocol.c:195:6:fs_ai_protocol_encode_dynamics	24	static
+../Core/Src/fs_ai_protocol.c:229:6:fs_ai_protocol_decode_status	16	static
+../Core/Src/fs_ai_protocol.c:254:6:fs_ai_protocol_decode_drive_f	24	static
+../Core/Src/fs_ai_protocol.c:267:6:fs_ai_protocol_decode_drive_r	24	static
+../Core/Src/fs_ai_protocol.c:280:6:fs_ai_protocol_decode_steer	24	static
+../Core/Src/fs_ai_protocol.c:297:6:fs_ai_protocol_decode_brake	16	static
+../Core/Src/fs_ai_protocol.c:312:6:fs_ai_protocol_decode_speeds	24	static

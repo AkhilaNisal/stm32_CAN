@@ -1,0 +1,17 @@
+../Core/Src/MCP2515.c:253:13:SPI_Tx	16	static
+../Core/Src/MCP2515.c:265:16:SPI_Rx	16	static
+../Core/Src/MCP2515.c:40:6:MCP2515_Initialize	16	static
+../Core/Src/MCP2515.c:115:6:MCP2515_Reset	8	static
+../Core/Src/MCP2515.c:125:9:MCP2515_ReadByte	16	static
+../Core/Src/MCP2515.c:141:6:MCP2515_ReadRxSequence	24	static
+../Core/Src/MCP2515.c:152:6:MCP2515_WriteByte	16	static
+../Core/Src/MCP2515.c:58:6:MCP2515_SetConfigMode	8	static
+../Core/Src/MCP2515.c:77:6:MCP2515_SetNormalMode	8	static
+../Core/Src/MCP2515.c:96:6:MCP2515_SetSleepMode	8	static
+../Core/Src/MCP2515.c:164:6:MCP2515_WriteByteSequence	24	static
+../Core/Src/MCP2515.c:176:6:MCP2515_LoadTxSequence	24	static
+../Core/Src/MCP2515.c:189:6:MCP2515_LoadTxBuffer	16	static
+../Core/Src/MCP2515.c:200:6:MCP2515_RequestToSend	16	static
+../Core/Src/MCP2515.c:210:9:MCP2515_ReadStatus	16	static
+../Core/Src/MCP2515.c:225:9:MCP2515_GetRxStatus	16	static
+../Core/Src/MCP2515.c:240:6:MCP2515_BitModify	24	static

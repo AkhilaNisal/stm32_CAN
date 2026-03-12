@@ -1,0 +1,11 @@
+../Core/Src/fs-ai_api_protocol.c:491:6:fs_ai_api_init	2
+../Core/Src/fs-ai_api_protocol.c:503:6:fs_ai_api_process_incoming	16
+../Core/Src/fs-ai_api_protocol.c:536:6:fs_ai_api_vcu2ai_get_data	9
+../Core/Src/fs-ai_api_protocol.c:612:6:fs_ai_api_ai2vcu_set_data	22
+../Core/Src/fs-ai_api_protocol.c:688:6:fs_ai_api_send_all_messages	1
+../Core/Src/fs-ai_api_protocol.c:697:6:fs_ai_api_get_can_stats	2
+../Core/Src/fs-ai_api_protocol.c:705:6:fs_ai_api_clear_can_stats	1
+../Core/Src/fs-ai_api_protocol.c:709:6:fs_ai_api_is_handshake_complete	2
+../Core/Src/fs-ai_api_protocol.c:714:6:fs_ai_api_is_comms_healthy	6
+../Core/Src/fs-ai_api_protocol.c:723:6:fs_ai_api_update_comms_watchdog	3
+../Core/Src/fs-ai_api_protocol.c:735:10:fs_ai_api_get_comms_age_ms	1

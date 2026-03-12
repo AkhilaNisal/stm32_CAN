@@ -1,2 +1,12 @@
-../Core/Src/fs_ai_protocol.c:8:6:FS_AI_TransmitStatus	1
-../Core/Src/fs_ai_protocol.c:33:6:FS_AI_ProcessIncoming	3
+../Core/Src/fs_ai_protocol.c:24:6:fs_ai_protocol_encode_status	3
+../Core/Src/fs_ai_protocol.c:65:6:fs_ai_protocol_encode_drive_f	7
+../Core/Src/fs_ai_protocol.c:100:6:fs_ai_protocol_encode_drive_r	7
+../Core/Src/fs_ai_protocol.c:135:6:fs_ai_protocol_encode_steer	5
+../Core/Src/fs_ai_protocol.c:160:6:fs_ai_protocol_encode_brake	7
+../Core/Src/fs_ai_protocol.c:195:6:fs_ai_protocol_encode_dynamics	3
+../Core/Src/fs_ai_protocol.c:229:6:fs_ai_protocol_decode_status	4
+../Core/Src/fs_ai_protocol.c:254:6:fs_ai_protocol_decode_drive_f	4
+../Core/Src/fs_ai_protocol.c:267:6:fs_ai_protocol_decode_drive_r	4
+../Core/Src/fs_ai_protocol.c:280:6:fs_ai_protocol_decode_steer	4
+../Core/Src/fs_ai_protocol.c:297:6:fs_ai_protocol_decode_brake	4
+../Core/Src/fs_ai_protocol.c:312:6:fs_ai_protocol_decode_speeds	4

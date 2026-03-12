@@ -1,0 +1,14 @@
+../Core/Src/can_interface.c:29:6:can_interface_init	8	static
+../Core/Src/can_interface.c:44:6:can_interface_deinit	8	static
+../Core/Src/can_interface.c:49:6:can_interface_recover	16	static
+../Core/Src/can_interface.c:64:6:can_interface_send	24	static
+../Core/Src/can_interface.c:81:6:can_interface_send_all	40	static
+../Core/Src/can_interface.c:139:6:can_interface_receive	48	static
+../Core/Src/can_interface.c:225:9:can_interface_messages_available	8	static
+../Core/Src/can_interface.c:230:6:can_interface_process_all	24	static
+../Core/Src/can_interface.c:248:21:can_interface_get_health	8	static
+../Core/Src/can_interface.c:268:6:can_interface_is_rx_timeout	16	static
+../Core/Src/can_interface.c:276:6:can_interface_update_watchdog	16	static
+../Core/Src/can_interface.c:291:6:can_interface_get_stats	16	static
+../Core/Src/can_interface.c:304:6:can_interface_clear_stats	8	static
+../Core/Src/can_interface.c:309:10:can_interface_get_rx_age_ms	8	static

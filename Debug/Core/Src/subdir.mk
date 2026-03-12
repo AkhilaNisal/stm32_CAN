@@ -7,7 +7,9 @@
 C_SRCS += \
 ../Core/Src/CANSPI.c \
 ../Core/Src/MCP2515.c \
-../Core/Src/fs-ai_api_protocol.c \
+../Core/Src/ai_controller.c \
+../Core/Src/can_interface.c \
+../Core/Src/can_transport.c \
 ../Core/Src/fs_ai_protocol.c \
 ../Core/Src/main.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
@@ -19,7 +21,9 @@ C_SRCS += \
 OBJS += \
 ./Core/Src/CANSPI.o \
 ./Core/Src/MCP2515.o \
-./Core/Src/fs-ai_api_protocol.o \
+./Core/Src/ai_controller.o \
+./Core/Src/can_interface.o \
+./Core/Src/can_transport.o \
 ./Core/Src/fs_ai_protocol.o \
 ./Core/Src/main.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
@@ -31,7 +35,9 @@ OBJS += \
 C_DEPS += \
 ./Core/Src/CANSPI.d \
 ./Core/Src/MCP2515.d \
-./Core/Src/fs-ai_api_protocol.d \
+./Core/Src/ai_controller.d \
+./Core/Src/can_interface.d \
+./Core/Src/can_transport.d \
 ./Core/Src/fs_ai_protocol.d \
 ./Core/Src/main.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
@@ -48,7 +54,7 @@ Core/Src/%.o Core/Src/%.su Core/Src/%.cyclo: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/CANSPI.cyclo ./Core/Src/CANSPI.d ./Core/Src/CANSPI.o ./Core/Src/CANSPI.su ./Core/Src/MCP2515.cyclo ./Core/Src/MCP2515.d ./Core/Src/MCP2515.o ./Core/Src/MCP2515.su ./Core/Src/fs-ai_api_protocol.cyclo ./Core/Src/fs-ai_api_protocol.d ./Core/Src/fs-ai_api_protocol.o ./Core/Src/fs-ai_api_protocol.su ./Core/Src/fs_ai_protocol.cyclo ./Core/Src/fs_ai_protocol.d ./Core/Src/fs_ai_protocol.o ./Core/Src/fs_ai_protocol.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
+	-$(RM) ./Core/Src/CANSPI.cyclo ./Core/Src/CANSPI.d ./Core/Src/CANSPI.o ./Core/Src/CANSPI.su ./Core/Src/MCP2515.cyclo ./Core/Src/MCP2515.d ./Core/Src/MCP2515.o ./Core/Src/MCP2515.su ./Core/Src/ai_controller.cyclo ./Core/Src/ai_controller.d ./Core/Src/ai_controller.o ./Core/Src/ai_controller.su ./Core/Src/can_interface.cyclo ./Core/Src/can_interface.d ./Core/Src/can_interface.o ./Core/Src/can_interface.su ./Core/Src/can_transport.cyclo ./Core/Src/can_transport.d ./Core/Src/can_transport.o ./Core/Src/can_transport.su ./Core/Src/fs_ai_protocol.cyclo ./Core/Src/fs_ai_protocol.d ./Core/Src/fs_ai_protocol.o ./Core/Src/fs_ai_protocol.su ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32f1xx_hal_msp.cyclo ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.cyclo ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.cyclo ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
 
 .PHONY: clean-Core-2f-Src
 
