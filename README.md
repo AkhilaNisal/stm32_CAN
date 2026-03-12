@@ -162,6 +162,7 @@ Vehicle state, handshake, and AS state.
 | 3    | Warning Flags | bits 0-7 | 0-255 | Warning bitmask     |
 
 DLC: 8 bytes
+
 AS States: 1=OFF, 2=READY, 3=DRIVING, 4=E-BRAKE, 5=FINISHED
 
 ---
@@ -243,6 +244,7 @@ DLC: 8 bytes
 | 3-4  | Total Cones Hit | uint16_t | 0-65535 | Total cones count |
 
 DLC: 8 bytes
+
 Mission: 0=NOT_SELECTED, 1=SELECTED, 2=RUNNING, 3=FINISHED
 
 ---
