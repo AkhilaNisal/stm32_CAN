@@ -102,6 +102,7 @@ The **FS-AI CAN Communication System** enables complete bidirectional communicat
 ## Hardware Configuration
 Arduino Mega Pinout
 |Pin	|Signal	|Device	|Purpose|
+|-----|-------|---------|-----------------|
 |51	|MOSI	|MCP2515 |SPI Data Out|
 |50	|MISO	|MCP2515 |SPI Data In|
 |52	|SCK	|MCP2515 |SPI Clock|
