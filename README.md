@@ -127,11 +127,13 @@ Interrupt:     RX Ready
 ### Frame Format
 Standard 11-bit CAN ID Frame
 
+```text
 ┌───────┬────┬─────────────────────────────────┐
 │ ID    │DLC │ DATA (0-8 bytes)                │
 ├───────┼────┼─────────────────────────────────┤
 │11-bit │4-bit│ B0 B1 B2 B3 B4 B5 B6 B7        │
 └───────┴────┴─────────────────────────────────┘
+```
 
 Byte Order: Little Endian (LSB first)
 
